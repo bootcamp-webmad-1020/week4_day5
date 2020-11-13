@@ -24,3 +24,14 @@ Para relacionar documentos:
       .populate('owner')    // 'owner' es el nombre del campo del modelo 'thing'
       .then(thing => console.log(thing))
     ```
+
+## Session check
+A través de un _middleware_ personalizado es posible limitar el acceso a ciertas rutas para usuarios no identificados:
+
+la referencia a oltra colección:
+```javascript
+router.use((req, res, next) => req.session.currentUser ? next() : res.render('forbidden'))
+```
+
+
+
