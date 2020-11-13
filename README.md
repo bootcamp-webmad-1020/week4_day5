@@ -25,7 +25,14 @@ Para relacionar documentos:
       .then(thing => console.log(thing))
     ```
 
-## Session check
+
+## Main points: session management
+Las dependecias `express-session` y `mongo-store` ofrecen configuraciones que permiten gestionar sesiones de usuario:
+- La propiedad `req.session.currentUser` almacena el usuario identificado.
+- El método `req.session.destroy()` cierra la sesión.
+
+
+## Main points: session check
 A través de un _middleware_ personalizado es posible limitar el acceso a ciertas rutas para usuarios no identificados:
 ```javascript
 router.use((req, res, next) => req.session.currentUser ? next() : res.render('forbidden'))
