@@ -1,0 +1,46 @@
+<div class="container">
+
+    <h1>{{title}}</h1>
+
+    <hr>
+
+    <div class="row justify-content-around">
+
+        <div class="col-md-4">
+
+            <h3>Detalles</h3>
+
+            <hr>
+
+            <p><strong>Descripción:</strong> {{description}}</p>
+            <p><strong>Rating:</strong> {{rating}}/10</p>
+
+            <a href="/libros" class="btn btn-dark">Volver a los libros</a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <h3>Autor/a</h3>
+
+            <hr>
+
+            {{#each author}}
+            <article>
+                <figure class="author-img">
+                    <img src="{{pictureUrl}}" alt="{{name}} {{lastName}}">
+                </figure>
+                <strong>{{name}} {{lastName}}</strong> ({{nationality}})
+            </article>
+
+            {{/each}}
+
+        </div>
+    </div>
+
+
+    <hr>
+
+
+
+</div>

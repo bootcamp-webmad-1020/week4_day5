@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Listado de libros</h1>
+
+    <ul>
+        {{#each allBooks}}
+        <li>{{title}} <small>
+                [<a href="/libros/detalle/{{_id}}">ver detalles</a>]
+                [<a href="/libros/editar-libro?book_id={{_id}}">editar</a>]
+                [<a href="/libros/eliminar-libro?book_id={{_id}}">eliminar</a>]
+            </small></li>
+        {{/each}}
+    </ul>
+</div>
