@@ -27,8 +27,6 @@ Para relacionar documentos:
 
 ## Session check
 A través de un _middleware_ personalizado es posible limitar el acceso a ciertas rutas para usuarios no identificados:
-
-la referencia a oltra colección:
 ```javascript
 router.use((req, res, next) => req.session.currentUser ? next() : res.render('forbidden'))
 ```
