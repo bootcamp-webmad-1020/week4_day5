@@ -13,7 +13,7 @@ Para relacionar documentos:
     const thingSchema = new Schema({
       title: String,
       owner: { type : Schema.Types.ObjectId, ref: 'User' },     // 'User' es el nombre del modelo
-      price: Number,
+      price: Number
     })
     ```
 * **En el controlador**: para _popular_ una consulta a la BBDD, requerir el modelo populado y pasar como argumento a `.populate()` el nombre del campo que contiene la referencia a oltra colección:
